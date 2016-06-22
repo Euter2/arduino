@@ -4,10 +4,10 @@
 #include <DallasTemperature.h>
 
 // wifi connection related variables
-const char* ssid     = "XXX"; //<-- setup required!!!
-const char* password = "XXX"; //<-- setup required!!!
+const char* ssid     = "tux"; //<-- setup required!!!
+const char* password = "1514020215"; //<-- setup required!!!
 const char* host = "api.thingspeak.com";
-const char* thingspeak_key = "XXX"; //<-- setup required!!!
+const char* thingspeak_key = "RU2IYZ5JZKU8Z4FV"; //<-- setup required!!!
 const long updatePeriod = 1*60*1000; //<-- setup required!!!
 
 // buubble detection related variables
@@ -38,7 +38,7 @@ void setup()
     //timer setup
     t.every(updatePeriod, sendBubbles);
     //wifi start
-    WiFi.hostname("BeerSensor");
+    WiFi.hostname("BeerSensor"); //<-- setup required!!!
     wifiConnect();   
 }
 
